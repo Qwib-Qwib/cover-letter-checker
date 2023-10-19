@@ -1,0 +1,20 @@
+<h1>Ce candidat est-il compatible ?</h1>
+<p>Ceci est une application permettant de déterminer si un candidat est compatible à un poste donné, basé sur sa lettre de motivation.</p>
+<p>L'application compare le poste avec la lettre et offre son opinion, informant l'utilisateur de divers aspects de la lettre qu'il pourrait avoir manqué et qui répondraient aux critères spécifiés dans l'offre.</p>
+<p>Pour pouvoir utiliser l'application, vous allez d'abord devoir créer un compte. Le processus est simple et rapide :</p>
+
+<%= link_to "Je m'inscris", new_user_session_path %>
+
+
+<%# <div class='cover-letter-checker-wrapper'>
+  <div class='checker-inputs-wrapper'>
+    <div class='job-posting-wrapper'>
+      <label for="job-posting">Contenu de l'offre d'emploi</label>
+      <textarea name="job-posting" id="job-posting" cols="30" rows="10" placeholder='Collez le contenu de votre offre ici.' required></textarea>
+    </div>
+    <div class='cover-letter-wrapper'>
+      <label for="cover-letter">Contenu de la lettre de motivation</label>
+      <textarea name="cover-letter" id="cover-letter" cols="30" rows="10" placeholder='Collez le contenu de la lettre de motivation ici.' required></textarea>
+    </div>
+  </div>
+</div> %>
