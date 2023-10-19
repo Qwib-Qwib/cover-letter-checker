@@ -1,0 +1,6 @@
+<% @my_offers.each do |offer| %>
+  <h3><%= offer.title %></h3>
+  <p><%= offer.content %></p>
+<% end %>
+
+<%= link_to "Ajouter une offre d'emploi", new_offer_path %>

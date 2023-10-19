@@ -3,8 +3,8 @@
 <p>Vous pouvez enregistrez plusieurs offres d'emploi différentes dans votre profil afin de comparer des lettres de motivation à ces offres.</p>
 <p>Copiez le contenu de votre offre ci-dessous. Si vous avez déjà des offres enregistrées, vous pouvez les consulter dans votre panneau accessible depuis la barre de navigation.</p>
 
-<%= simple_form_for @user, @offer do |f| %>
+<%= simple_form_for @offer do |f| %>
   <%= f.input :title %>
-  <%= f.textarea :content %>
+  <%= f.input :content %>
   <%= f.button :submit %>
 <% end %>

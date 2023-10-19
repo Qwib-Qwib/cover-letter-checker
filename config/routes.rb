@@ -9,8 +9,6 @@ Rails.application.routes.draw do
   # Defines the root path for logged-in users
   # get '/user/:id' => "offers#index", as: :user_root
 
-  # Defines routes related to offers CRUD
-  get 'users/:id/offers', to: 'offers#index'
-  get 'users/:id/offers/new', to: 'offers#new'
-  post 'users/:id/offers', to: 'offer#create'
+  # Defines routes related to offers' CRUD
+  resources :offers, only: %i[index new create]
 end

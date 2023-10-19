@@ -1,21 +1,26 @@
 class OffersController < ApplicationController
   def index
-    @user = User.find(params[:id])
+    @user = current_user
     @my_offers = @user.offers
   end
 
   def new
-    @user = User.find(params[:id])
     @offer = Offer.new
   end
 
   def create
-    @user = User.find(params[:id])
-    @offer = Offer.new(params[:offer])
+    @offer = Offer.new(offer_params)
+    @offer.user = current_user
     if @offer.save
-      redirect_to root
+      redirect_to offers_path
     else
       render :new, status: :unprocessable_entity
     end
+  end
+
+  private
+
+  def offer_params
+    params.require(:offer).permit(:title, :content)
   end
 end
