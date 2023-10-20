@@ -1,6 +1,9 @@
-<% @my_offers.each do |offer| %>
-  <h3><%= offer.title %></h3>
-  <p><%= offer.content %></p>
-<% end %>
-
 <%= link_to "Ajouter une offre d'emploi", new_offer_path %>
+
+<% @my_offers.each do |offer| %>
+  <%= link_to(offer_path(offer)) do %>
+    <h3><%= offer.title %></h3>
+    <p><%= offer.content %></p>
+  <% end %>
+
+<% end %>

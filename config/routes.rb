@@ -10,5 +10,8 @@ Rails.application.routes.draw do
   # get '/user/:id' => "offers#index", as: :user_root
 
   # Defines routes related to offers' CRUD
-  resources :offers, only: %i[index new create]
+  resources :offers, only: %i[index show new create]
+
+  # Defines routes related to job applications' CRUD
+  resources :job_applications, only: %i[show new create]
 end

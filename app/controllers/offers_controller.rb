@@ -4,6 +4,11 @@ class OffersController < ApplicationController
     @my_offers = @user.offers
   end
 
+  def show
+    @offer = Offer.find(params[:id])
+    @offer_applications = @offer.job_applications
+  end
+
   def new
     @offer = Offer.new
   end

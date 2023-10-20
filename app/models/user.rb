@@ -5,5 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :offers, dependent: :destroy
-  has_many :applications, through: :offers
+  has_many :job_applications, through: :offers
 end
