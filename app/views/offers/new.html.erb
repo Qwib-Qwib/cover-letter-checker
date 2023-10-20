@@ -5,6 +5,6 @@
 
 <%= simple_form_for @offer do |f| %>
   <%= f.input :title %>
-  <%= f.input :content %>
+  <%= f.input :content, input_html: { maxlength: 4000 } %>
   <%= f.button :submit %>
 <% end %>

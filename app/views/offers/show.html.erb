@@ -1,7 +1,7 @@
 <h2><%= @offer.title %></h2>
 <p><%= @offer.content %></p>
 
-<%= link_to "Ajouter une candidature", new_job_application_path %>
+<%= link_to "Ajouter une candidature", new_offer_job_application_path(@offer) %>
 
 <h2>Candidatures pour cette offre</h2>
 <% @offer_applications.each do |application| %>
