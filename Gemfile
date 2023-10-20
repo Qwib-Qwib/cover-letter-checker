@@ -57,12 +57,20 @@ gem 'simple_form'
 # Use autoprefixer-rails to automatically add custom CSS prefixes for browser compatitility
 gem 'autoprefixer-rails'
 
-# Use httparty to communicate with APIs
+# Use httparty to communicate with APIs. USE THIS OR RUBY-OPENAI.
+# The 'chatgpt_request_service.rb' service file is associated with this gem.
 gem 'httparty'
+
+# Use ruby-openai to make API calls to ChatGPT. USE THIS OR HTTPARTY.
+# The 'openai.rb' initializer file is associated with this gem.
+gem 'ruby-openai'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
+
+  # Generate lorem ipsum
+  gem 'faker'
 end
 
 group :development do
