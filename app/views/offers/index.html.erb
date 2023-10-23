@@ -1,4 +1,4 @@
-<%= link_to "Ajouter une offre d'emploi", new_offer_path %>
+<%= link_to "Ajouter une offre d'emploi", new_offer_path, class: 'button add-offer' %>
 
 <% @my_offers.each do |offer| %>
   <%= link_to(offer_path(offer)) do %>
