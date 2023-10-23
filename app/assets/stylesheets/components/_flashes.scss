@@ -1,0 +1,50 @@
+@import '../config/index';
+
+.alert {
+  font-family: $main-font;
+  padding: 12px;
+  max-width: 25%;
+  border-radius: 4px;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+
+  .button {
+    border: none;
+    font-size: 15px;
+    margin-top: 12px;
+    padding: 8px 16px;
+    cursor: pointer;
+  }
+}
+
+.alert-info {
+  background-color: $flash-green;
+
+  .button {
+    background-color: $forest-green;
+  }
+
+  .button:hover {
+    background-color: $light-yellow;
+    color: $forest-green;
+    transition: background-color, color, 0.3s;
+  }
+}
+
+.alert-warning {
+  background-color: $flash-red;
+
+  .button {
+    background-color: $dark-brown;
+  }
+
+  .button:hover {
+    background-color: $light-yellow;
+    color: $dark-brown;
+    transition: background-color, color, 0.3s;
+  }
+}

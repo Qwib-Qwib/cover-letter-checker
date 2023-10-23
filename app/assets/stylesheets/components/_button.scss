@@ -1,3 +1,5 @@
+@import '../config/index';
+
 .button {
   display: block;
   width: fit-content;
@@ -5,13 +7,13 @@
   padding: 8px 16px;
   font-size: 25px;
   text-decoration: none;
-  background-color: #ff5919;
-  color: #e9d985;
+  background-color: $bright-orange;
+  color: $yellow;
   font-weight: bold;
 }
 
 .button:hover {
-  background-color: #e9d985;
-  color: #ff5919;
+  background-color: $yellow;
+  color: $bright-orange;
   transition: background-color, color, 0.3s;
 }

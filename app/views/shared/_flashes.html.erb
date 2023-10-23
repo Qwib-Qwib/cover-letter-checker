@@ -1,0 +1,12 @@
+<% if notice %>
+  <div class="alert alert-info alert-dismissible fade show m-1" role="alert" data-controller='flashes'>
+    <%= notice %>
+    <button type="button" class="button" data-action="click->flashes#dismiss" aria-label="Close">J'ai compris</button>
+  </div>
+<% end %>
+<% if alert %>
+  <div class="alert alert-warning alert-dismissible fade show m-1" role="alert" data-controller='flashes'>
+    <%= alert %>
+    <button type="button" class="button" data-action="click->flashes#dismiss" aria-label="Close">J'ai compris</button>
+  </div>
+<% end %>
