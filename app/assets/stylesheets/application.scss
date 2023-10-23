@@ -13,15 +13,17 @@
  *= require_tree .
  *= require_self
  */
+@import 'pages/index';
 @import 'components/index';
-@import 'config/colors';
+@import 'config/index';
 
 body {
   background-color: $light-yellow;
   margin: 0;
+  min-height: 100vh;
 }
 
 .container {
   width: 80%;
-  margin: auto;
+  margin: 0 auto;
 }

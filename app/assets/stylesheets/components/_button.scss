@@ -1,0 +1,17 @@
+.button {
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 8px 16px;
+  font-size: 25px;
+  text-decoration: none;
+  background-color: #ff5919;
+  color: #e9d985;
+  font-weight: bold;
+}
+
+.button:hover {
+  background-color: #e9d985;
+  color: #ff5919;
+  transition: background-color, color, 0.3s;
+}

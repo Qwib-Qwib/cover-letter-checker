@@ -46,6 +46,7 @@ class JobApplicationsController < ApplicationController
     chat_gpt_response['choices'][0]['message']['content']
   end
 
+  # Temporary method, to be removed once I get an API key.
   def generate_fake_para
     Faker::Lorem.paragraphs(number: 4).join(" ")
   end

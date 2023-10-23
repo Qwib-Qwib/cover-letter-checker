@@ -1,0 +1,32 @@
+@import 'config/index';
+
+.home-wrapper {
+  height: calc(100vh - 50px);
+  position: relative;
+  top: -50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home {
+  font-family: $main-font;
+  background-color: $brown;
+  margin-top: 12px !important;
+  padding: 12px;
+  border-radius: 12px;
+
+  h1 {
+    margin-top: 0;
+    font-size: 50px;
+  }
+
+  p {
+    font-size: 25px;
+    text-align: justify;
+  }
+
+  p:last-of-type {
+    margin-bottom: 12px;
+  }
+}

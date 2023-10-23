@@ -8,6 +8,7 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Cutive&family=Lato&family=Open+Sans&display=swap');</style>
   </head>
 
   <body>
@@ -32,11 +33,9 @@
       <% end %>
     </div>
 
-    <div class='container'>
-      <%= yield %>
+    <%= yield %>
 
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
-    </div>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
   </body>
 </html>
