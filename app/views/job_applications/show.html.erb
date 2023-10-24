@@ -1,8 +1,12 @@
-<div class='application-show-wrapper'>
+<div class='application-show-wrapper container'>
   <h2>Candidature de <%= @application.applicant_name %></h2>
   <div class='offer-and-application-contents'>
     <p class='application-show-offer-content'><%= @offer.content %></p>
     <p class='application-show-application-content'><%= @application.content %></p>
   </div>
-  <p><%= @application.analysis %></p>
+
+  <div class='application-show-analysis-section'>
+    <h2 class='application-show-analysis-title'>Opinion sur le candidat</h2>
+    <p class='application-show-analysis-content'><%= @application.analysis %></p>
+  </div>
 </div>

@@ -24,10 +24,22 @@ body {
   min-height: 100vh;
 }
 
+.overlay {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  z-index: 0;
+}
+
+// The z-index is essential to have the actual application content be stacked over the overlay element. The bits of the
+// overlay elements supposed to be over the APPLICATION have their own superior z-index. Similarly, the position
+// relative is there because the z-index requires it.
 .container {
   width: 80%;
   margin: 0 auto;
   margin-bottom: 32px;
+  position: relative;
+  z-index: 1;
 }
 
 h2 {

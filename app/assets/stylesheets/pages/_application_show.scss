@@ -1,0 +1,32 @@
+@import '../config/index';
+
+.offer-and-application-contents {
+  display: flex;
+  justify-content: space-between;
+}
+
+.application-show-offer-content, .application-show-application-content {
+  width: 43%;
+  text-align: justify;
+  background-color: white;
+  padding: 32px;
+  font-size: 20px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.application-show-offer-content {
+  font-family: $offer-font;
+}
+
+.application-show-application-content {
+  font-family: $application-font;
+  line-height: 1.5em;
+}
+
+.application-show-analysis-content {
+  background-color: $light-brown;
+  padding: 12px;
+  border-radius: 12px;
+  font-size: 25px;
+}

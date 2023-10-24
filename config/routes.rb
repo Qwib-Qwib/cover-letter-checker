@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   root to: "pages#home"
 
   # Defines the root path for logged-in users
-  # get '/user/:id' => "offers#index", as: :user_root
+  get '/offers/' => "offers#index", as: :user_root
 
   # Defines routes related to offers' CRUD, with routes related to job applications' CRUD nested inside them.
   resources :offers, only: %i[index show new create] do
