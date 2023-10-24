@@ -1,0 +1,52 @@
+@import '../config/index';
+
+.offer-link {
+  font-family: $offer-font;
+  text-decoration: none;
+  color: black;
+}
+
+.offer-card {
+  background-color: $light-brown;
+  padding: 12px;
+  margin: 12px 0;
+
+  * {
+    margin: 0;
+  }
+
+  p {
+    font-size: 20px;
+  }
+
+  h3 {
+    margin-bottom: 8px;
+  }
+}
+
+// The following two rulesets are necessary not only to style the offer description, but also the line-clamping.
+// The heigth is a calc to account for the number of lines and their line height.
+.offer-card-content {
+  height: calc(26px * 14);
+  line-height: 26px;
+  text-align: justify;
+  background-color: white;
+  padding: 32px;
+  overflow: hidden;
+  position: relative;
+}
+
+.offer-card-content::after {
+  width: 100%;
+  display: block;
+  content: '...';
+  background-color: white;
+  line-height: 26px;
+  padding-bottom: 32px;
+  position: absolute;
+  bottom: 0px;
+}
+
+.offer-card-applications-count {
+  margin-top: 8px;
+}

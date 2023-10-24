@@ -1,9 +1,19 @@
-<%= link_to "Ajouter une offre d'emploi", new_offer_path, class: 'button add-offer' %>
+<div class='offers-index-wrapper container'>
+  <h2>Mes fiches de poste</h2>
+  <%= link_to "Ajouter une fiche", new_offer_path, class: 'button add-offer' %>
 
-<% @my_offers.each do |offer| %>
-  <%= link_to(offer_path(offer)) do %>
-    <h3><%= offer.title %></h3>
-    <p><%= offer.content %></p>
-  <% end %>
+  <div class='offer-cards-list'>
+    <% @my_offers.each do |offer| %>
+      <%= link_to(offer_path(offer), class: 'offer-link') do %>
+      <div class='offer-card'>
+        <div class='offer-card-data'>
+          <h3><%= offer.title %></h3>
+          <p class='offer-card-content'><%= offer.content %></p>
+        </div>
+        <p class='offer-card-applications-count'>Candidatures enregistrées : <%= offer.job_applications.length %></p>
+      </div>
+      <% end %>
+    <% end %>
+  </div>
 
-<% end %>
+</div>

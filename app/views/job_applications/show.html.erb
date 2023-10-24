@@ -1,3 +1,8 @@
-<h2><%= @application.applicant_name %></h2>
-<p><%= @application.content %></p>
-<p><%= @application.analysis %></p>
+<div class='application-show-wrapper'>
+  <h2>Candidature de <%= @application.applicant_name %></h2>
+  <div class='offer-and-application-contents'>
+    <p class='application-show-offer-content'><%= @offer.content %></p>
+    <p class='application-show-application-content'><%= @application.content %></p>
+  </div>
+  <p><%= @application.analysis %></p>
+</div>

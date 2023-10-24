@@ -1,0 +1,14 @@
+.offers-index-wrapper {
+  position: relative;
+}
+
+.button.add-offer {
+  margin-top: 12px;
+  margin-right: 12px;
+}
+
+.offer-cards-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 22px;
+}

@@ -1,8 +1,9 @@
-@import 'config/colors';
+@import 'config/index';
 
 .navbar {
   height: 50px;
   padding: 0 12px;
+  font-family: $navbar-font;
   background-color: $not-quite-black;
   position: sticky;
   display: flex;

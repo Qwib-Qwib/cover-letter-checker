@@ -1,6 +1,7 @@
 class JobApplicationsController < ApplicationController
   def show
     @application = JobApplication.find(params[:id])
+    @offer = @application.offer
   end
 
   def new

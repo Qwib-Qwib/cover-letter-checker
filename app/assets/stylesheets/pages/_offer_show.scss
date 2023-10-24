@@ -1,0 +1,25 @@
+.button.add-application {
+  margin-top: 12px;
+  margin-right: 12px;
+}
+
+.offer-show-data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.offer-show-data-content {
+  margin: 0;
+  background-color: white;
+  text-align: justify;
+  padding: 32px;
+  font-size: 20px;
+  width: 40%;
+}
+
+.offer-show-applications-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 22px;
+}

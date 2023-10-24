@@ -1,11 +1,21 @@
-<h2><%= @offer.title %></h2>
-<p><%= @offer.content %></p>
+<div class='offer-show-wrapper container'>
+  <div class='offer-show-data'>
+    <h2><%= @offer.title %></h2>
+    <p class='offer-show-data-content'><%= @offer.content %></p>
+  </div>
 
-<%= link_to "Ajouter une candidature", new_offer_job_application_path(@offer) %>
+  <h2>Candidatures pour cette offre</h2>
 
-<h2>Candidatures pour cette offre</h2>
-<% @offer_applications.each do |application| %>
-  <h3><%= application.applicant_name %></h3>
-  <p><%= application.content %></p>
-  <p><%= application.analysis %></p>
-<% end %>
+  <%= link_to "Ajouter une candidature", new_offer_job_application_path(@offer), class: 'button add-application' %>
+
+  <div class='offer-show-applications-list'>
+    <% @offer_applications.each do |application| %>
+      <%= link_to(offer_job_application_path(@offer, application), class: 'application-link') do %>
+        <div class='offer-show-application-card'>
+          <h3><%= application.applicant_name %></h3>
+          <p class='application-card-content'><%= application.content %></p>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
