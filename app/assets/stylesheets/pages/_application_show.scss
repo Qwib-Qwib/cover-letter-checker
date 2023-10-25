@@ -1,5 +1,10 @@
 @import '../config/index';
 
+.button.back-to-offer {
+  margin-bottom: 12px;
+  margin-right: 0;
+}
+
 .offer-and-application-contents {
   display: flex;
   justify-content: space-between;

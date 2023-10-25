@@ -2,6 +2,19 @@
   position: relative;
 }
 
+.offer-show-back-and-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button.back-to-offers-index {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
 .button.add-offer {
   margin-top: 12px;
   margin-right: 12px;

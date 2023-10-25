@@ -1,5 +1,8 @@
 <div class='application-show-wrapper container'>
   <h2>Candidature de <%= @application.applicant_name %></h2>
+
+  <%= link_to "Retour à l'offre", :back, class: 'button back-to-offer' %>
+
   <div class='offer-and-application-contents'>
     <p class='application-show-offer-content'><%= @offer.content %></p>
     <p class='application-show-application-content'><%= @application.content %></p>

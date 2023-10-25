@@ -8,9 +8,11 @@
 
   <%= simple_form_for [@offer, @application] do |f| %>
     <div class='form-inputs'>
-      <%= f.input :applicant_name %>
-      <%= f.input :content %>
+      <%= f.input :applicant_name, label: "Nom du candidat" %>
+      <%= f.input :content, label: "Lettre de motivation" %>
     </div>
-    <%= f.button :submit, class: 'button' %>
+    <%= f.button :submit, 'Enregistrer', class: 'button' %>
   <% end %>
+
+  <%= link_to "Page précédente", :back %>
 </div>
