@@ -40,7 +40,7 @@
     margin-bottom: 5%;
   }
 
-  input:not(.button, .boolean) {
+  input:not(.button, .boolean), textarea {
     margin-left: 12px;
     width: 50%;
   }
@@ -53,7 +53,7 @@
   }
 
   .button {
-    margin-top: 10%;
+    margin-top: 12px;
   }
 }
 
