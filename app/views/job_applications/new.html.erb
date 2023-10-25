@@ -1,5 +1,16 @@
-<%= simple_form_for [@offer, @application] do |f| %>
-  <%= f.input :applicant_name %>
-  <%= f.input :content %>
-  <%= f.button :submit %>
-<% end %>
+<div class='new-job-application-wrapper user-form container'>
+  <h2>Nouvelle candidature pour "<%= @offer.title %>"</h2>
+
+  <div class='new-job-application-para'>
+    <p>Vous pouvez lier une nouvelle candidature à votre offre "<%= @offer.title %>".</p>
+    <p>Cette candidature sera ensuite analysée pour une potentielle compatibilité avec la fiche de poste.</p>
+  </div>
+
+  <%= simple_form_for [@offer, @application] do |f| %>
+    <div class='form-inputs'>
+      <%= f.input :applicant_name %>
+      <%= f.input :content %>
+    </div>
+    <%= f.button :submit, class: 'button' %>
+  <% end %>
+</div>
