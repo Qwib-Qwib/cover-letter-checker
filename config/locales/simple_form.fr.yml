@@ -1,0 +1,25 @@
+fr:
+  simple_form:
+    "yes": 'Yes'
+    "no": 'No'
+    required:
+      text: 'Requis'
+      mark: '*'
+    error_notification:
+      default_message: "Veuillez corriger les erreurs suivantes :"
+    labels:
+      defaults:
+        email: "E-mail"
+        username: "Nom d'utilisateur"
+        password: 'Mot de passe'
+        password_confirmation: "Confirmer le mot de passe"
+        current_password: "Ancien mot de passe"
+        title: "Intitulé du poste"
+        applicant_name: "Nom du candidat"
+      user:
+        edit:
+          password: "Nouveau mot de passe"
+      offer:
+        content: "Fiche de poste"
+      job_application:
+        content: "Lettre de motivation"

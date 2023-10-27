@@ -8,11 +8,17 @@
 
   <%= simple_form_for @offer do |f| %>
   <div class='form-inputs'>
-    <%= f.input :title, label: 'Intitulé du poste', error: "L'intitulé est requis." %>
-    <%= f.input :content, label:'Fiche de poste', error: "La fiche de poste est requise et ne peut pas dépasser 4000 caractères.", input_html: { maxlength: 4000 } %>
+    <% if @offer.errors.any? %>
+      <%= f.inspect %>
+      <%= @offer.inspect %>
+    <% end %>
+    <%= f.input :title, error: "L'intitulé est requis." %>
+    <%= f.input :content, error: "La fiche de poste est requise et ne peut pas dépasser 4000 caractères.", input_html: { maxlength: 4000 } %>
   </div>
     <%= f.button :submit, 'Enregistrer', class: 'button' %>
   <% end %>
 
-  <%= link_to "Page précédente", :back %>
+  <div class='misc-links'>
+    <%= link_to "Page précédente", :back %>
+  </div>
 </div>

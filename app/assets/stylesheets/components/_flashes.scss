@@ -5,12 +5,12 @@
   padding: 12px;
   max-width: 25%;
   border-radius: 4px;
-  position: absolute;
+  position: fixed;
   right: 20px;
   bottom: 20px;
   display: flex;
   flex-direction: column;
-  z-index: 2;
+  z-index: 1;
 
   .button {
     border: none;
@@ -39,12 +39,12 @@
   background-color: $flash-red;
 
   .button {
-    background-color: $dark-brown;
+    background-color: $brown;
   }
 
   .button:hover {
     background-color: $light-yellow;
-    color: $dark-brown;
+    color: $brown;
     transition: background-color, color, 0.3s;
   }
 }

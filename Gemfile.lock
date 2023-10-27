@@ -99,8 +99,6 @@ GEM
       warden (~> 1.2.3)
     erubi (1.12.0)
     execjs (2.9.1)
-    faker (3.2.1)
-      i18n (>= 1.8.11, < 2)
     faraday (2.7.11)
       base64
       faraday-net_http (>= 2.0, < 3.1)
@@ -182,6 +180,9 @@ GEM
     rails-html-sanitizer (1.6.0)
       loofah (~> 2.21)
       nokogiri (~> 1.14)
+    rails-i18n (7.0.8)
+      i18n (>= 0.7, < 2)
+      railties (>= 6.0.0, < 8)
     railties (7.0.8)
       actionpack (= 7.0.8)
       activesupport (= 7.0.8)
@@ -261,12 +262,12 @@ DEPENDENCIES
   capybara
   debug
   devise
-  faker
   httparty
   importmap-rails
   jbuilder
   puma (~> 5.0)
   rails (~> 7.0.8)
+  rails-i18n
   redis (~> 4.0)
   ruby-openai
   sassc-rails

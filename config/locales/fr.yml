@@ -1,0 +1,20 @@
+fr:
+  activerecord:
+    attributes:
+      # user:
+      #   email: '"E-mail"'
+      #   username: '"Nom d'utilisateur"'
+      #   password: '"Mot de passe"'
+      #   password_confirmation: '"Confirmer le mot de passe"'
+      #   current_password: '"Ancien mot de passe"'
+      offer:
+        title: '"Intitulé du poste"'
+        content: '"Fiche de poste"'
+      job_application:
+        applicant_name: '"Nom du candidat"'
+        content: '"Lettre de motivation"'
+    errors:
+      messages:
+        blank: "est requis"
+        too_long: "est trop long"
+        too_short: "est trop court"

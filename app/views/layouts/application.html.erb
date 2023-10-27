@@ -12,12 +12,10 @@
   </head>
 
   <body>
-    <div class='overlay'>
-      <%= render 'shared/flashes' %>
-    </div>
-
     <%= render 'shared/navbar' %>
 
     <%= yield %>
+
+    <%= render 'shared/flashes' %>
   </body>
 </html>

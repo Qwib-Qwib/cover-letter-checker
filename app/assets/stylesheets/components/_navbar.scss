@@ -10,18 +10,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 2;
+  z-index: 1;
 }
 
-.home-link-wrapper, .profile-links-wrapper {
-  > div {
-    color: $light-yellow;
-  }
-
-  a {
-    color: $light-yellow;
-    text-decoration: none;
-  }
+.navbar-link {
+  color: $light-yellow;
+  text-decoration: none;
 }
 
 .home-link-wrapper {
@@ -34,6 +28,7 @@
   position: relative;
 
   .username {
+    color: $light-yellow;
     display: flex;
     justify-content: center;
     align-items: center;

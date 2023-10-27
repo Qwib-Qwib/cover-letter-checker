@@ -65,12 +65,12 @@ gem 'httparty'
 # The 'openai.rb' initializer file is associated with this gem.
 gem 'ruby-openai'
 
+# Use rails-i18n to set locales other than en.
+gem 'rails-i18n'
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
-
-  # Generate lorem ipsum
-  gem 'faker'
 end
 
 group :development do

@@ -12,20 +12,16 @@
       <% end %>
 
       <%= f.input :username,
-                  label: "Nom d'utilisateur",
                   # hint: "leave it blank if you don't want to change it",
                   required: false %>
       <%= f.input :password,
-                  label: "Nouveau mot de passe",
                   # hint: "leave it blank if you don't want to change it",
                   required: false,
                   input_html: { autocomplete: "new-password" } %>
       <%= f.input :password_confirmation,
-                  label: "Confirmer le mot de passe",
                   required: false,
                   input_html: { autocomplete: "new-password" } %>
       <%= f.input :current_password,
-                  label: "Ancien mot de passe",
                   # hint: "we need your current password to confirm your changes",
                   required: true,
                   input_html: { autocomplete: "current-password" } %>
@@ -38,5 +34,7 @@
 
   <div><%= button_to "Supprimer mon compte", registration_path(resource_name), class: 'button delete-account' , data: { confirm: "Êtes-vous sûr(e) ? Cette action est irréversible.", turbo_confirm: "Êtes-vous sûr(e) ? Cette action est irréversible." }, method: :delete %></div>
 
-  <%= link_to "Page précédente", :back %>
+  <div class='misc-links'>
+    <%= link_to "Page précédente", :back %>
+  </div>
 </div>
