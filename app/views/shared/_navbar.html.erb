@@ -1,6 +1,6 @@
 <div class='navbar'>
   <div class='home-link-wrapper'>
-    <%= link_to 'Est-il compatible ?', root_path, class: 'navbar-link' %>
+    <%= link_to 'Est-il compatible ?', user_signed_in? ? user_root_path : root_path, class: 'navbar-link' %>
   </div>
   <% if user_signed_in? %>
     <div class='profile-links-wrapper signed-in'>
@@ -8,7 +8,10 @@
       <div class='user-links'>
         <%= link_to 'Mes offres', offers_path, class: 'navbar-link' %>
         <%= link_to 'Modifier mes informations', edit_user_registration_path, class: 'navbar-link' %>
-        <%= link_to 'Me déconnecter', destroy_user_session_path, class: 'navbar-link', data: {turbo_method: :delete} %>
+        <%# Ideally the next link should be a DELETE request with a turbo-link, but these don't work if the user clicks %>
+        <%# with the wheel and open a new tab, because a GET is sent instead in that case. config.sign_out_via has been %>
+        <%# set accordingly in Devise config file. %>
+        <%= link_to 'Me déconnecter', destroy_user_session_path, class: 'navbar-link' %>
       </div>
     </div>
   <% else %>
