@@ -4,5 +4,5 @@ class Offer < ApplicationRecord
 
   validates :title, :content, presence: true
   validates :title, length: { maximum: 100 }
-  validates :content, length: { in: 1000..5500 }
+  validates :content, length: { in: 1000..5500 }, if: :content?
 end

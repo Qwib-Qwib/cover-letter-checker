@@ -8,10 +8,19 @@
 
   <%= simple_form_for [@offer, @application] do |f| %>
     <div class='form-inputs'>
-      <%= f.error_notification message: @application.errors.full_messages.to_sentence %>
+      <% if @application.errors.any? %>
+        <%= f.error_notification %>
+        <ul>
+          <% @application.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      <% end %>
+
       <%= f.input :applicant_name %>
       <%= f.input :content %>
     </div>
+
     <%= f.button :submit, 'Enregistrer', class: 'button' %>
   <% end %>
 

@@ -1,12 +1,6 @@
 fr:
   activerecord:
     attributes:
-      # user:
-      #   email: '"E-mail"'
-      #   username: '"Nom d'utilisateur"'
-      #   password: '"Mot de passe"'
-      #   password_confirmation: '"Confirmer le mot de passe"'
-      #   current_password: '"Ancien mot de passe"'
       offer:
         title: '"Intitulé du poste"'
         content: '"Fiche de poste"'
@@ -18,3 +12,15 @@ fr:
         blank: "est requis"
         too_long: "est trop long"
         too_short: "est trop court"
+      models:
+        user:
+          attributes:
+            email:
+              blank: "L'e-mail est requis."
+            username:
+              blank: "Le nom d'utilisateur est requis."
+            password:
+              blank: "Le mot de passe est requis."
+              too_short: "Le mot de passe est trop court."
+            current_password:
+              blank: "Le mot de passe actuel est requis."
