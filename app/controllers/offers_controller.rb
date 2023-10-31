@@ -6,6 +6,7 @@ class OffersController < ApplicationController
 
   def show
     @offer = Offer.find(params[:id])
+    render file: "public/401.html", status: :unauthorized if @offer.user != current_user
     @offer_applications = @offer.job_applications
   end
 

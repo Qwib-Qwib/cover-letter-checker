@@ -1,16 +1,19 @@
 class JobApplicationsController < ApplicationController
   def show
     @application = JobApplication.find(params[:id])
+    render file: "public/401.html", status: :unauthorized if @application.offer.user != current_user
     @offer = @application.offer
   end
 
   def new
     @offer = Offer.find(params[:offer_id])
+    render file: "public/401.html", status: :unauthorized if @offer.user != current_user
     @application = JobApplication.new
   end
 
   def create
     @offer = Offer.find(params[:offer_id])
+    render file: "public/401.html", status: :unauthorized if @offer.user != current_user
     @application = JobApplication.new(job_application_params)
     @application.offer = @offer
 
