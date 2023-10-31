@@ -11,14 +11,18 @@
 
   <%= link_to "Ajouter une candidature", new_offer_job_application_path(@offer), class: 'button add-application' %>
 
-  <div class='offer-show-applications-list'>
-    <% @offer_applications.each do |application| %>
-      <%= link_to(offer_job_application_path(@offer, application), class: 'application-link') do %>
-        <div class='offer-show-application-card'>
-          <h3><%= application.applicant_name %></h3>
-          <p class='application-card-content'><%= application.content %></p>
-        </div>
+  <% if @offer_applications.empty? %>
+    <p class="no-job-application-para">Vous n'avez enregistré aucune candidature pour cette offre ! Vous pouvez commencer à le faire en cliquant sur le bouton ci-dessus.</p>
+  <% else %>
+    <div class='offer-show-applications-list'>
+      <% @offer_applications.each do |application| %>
+        <%= link_to(offer_job_application_path(@offer, application), class: 'application-link') do %>
+          <div class='offer-show-application-card'>
+            <h3><%= application.applicant_name %></h3>
+            <p class='application-card-content'><%= application.content %></p>
+          </div>
+        <% end %>
       <% end %>
-    <% end %>
-  </div>
+    </div>
+  <% end %>
 </div>
