@@ -2,18 +2,22 @@
   <h2>Mes offres d'emploi</h2>
   <%= link_to "Ajouter une offre", new_offer_path, class: 'button add-offer' %>
 
-  <div class='offer-cards-list'>
-    <% @my_offers.each do |offer| %>
-      <%= link_to(offer_path(offer), class: 'offer-link') do %>
-      <div class='offer-card'>
-        <div class='offer-card-data'>
-          <h3><%= offer.title %></h3>
-          <p class='offer-card-content'><%= offer.content %></p>
+  <% if @my_offers.empty? %>
+    <p class="no-offers-para">Vous n'avez enregistré aucune offre ! Vous pouvez commencer à le faire en cliquant sur le bouton juste au dessus.</p>
+  <% else %>
+    <div class='offer-cards-list'>
+      <% @my_offers.each do |offer| %>
+        <%= link_to(offer_path(offer), class: 'offer-link') do %>
+        <div class='offer-card'>
+          <div class='offer-card-data'>
+            <h3><%= offer.title %></h3>
+            <p class='offer-card-content'><%= offer.content %></p>
+          </div>
+          <p class='offer-card-applications-count'>Candidatures enregistrées : <%= offer.job_applications.length %></p>
         </div>
-        <p class='offer-card-applications-count'>Candidatures enregistrées : <%= offer.job_applications.length %></p>
-      </div>
+        <% end %>
       <% end %>
-    <% end %>
-  </div>
+    </div>
+  <% end %>
 
 </div>
