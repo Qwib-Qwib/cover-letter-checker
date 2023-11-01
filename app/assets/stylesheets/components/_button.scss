@@ -5,14 +5,14 @@
   width: fit-content;
   margin: 0 auto;
   padding: 8px 16px;
-  font-size: 25px;
+  font-size: 1rem;
   text-decoration: none;
   background-color: $bright-orange;
   color: $yellow;
   font-weight: bold;
 }
 
-.button:hover {
+.button:hover, .button:active {
   background-color: $yellow;
   color: $bright-orange;
   transition: background-color, color, 0.3s;

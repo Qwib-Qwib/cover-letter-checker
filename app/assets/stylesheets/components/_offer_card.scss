@@ -16,7 +16,7 @@
   }
 
   p {
-    font-size: 20px;
+    font-size: 0.8rem;
   }
 
   h3 {
@@ -27,8 +27,8 @@
 // The following two rulesets are necessary not only to style the offer description, but also the line-clamping.
 // The heigth is a calc to account for the number of lines and their line height.
 .offer-card-content {
-  height: calc(26px * 14);
-  line-height: 26px;
+  height: calc(1.04rem * 14);
+  line-height: 1.04rem;
   text-align: justify;
   background-color: white;
   padding: 32px;
@@ -41,7 +41,7 @@
   display: block;
   content: '...';
   background-color: white;
-  line-height: 26px;
+  line-height: 1.04rem;
   padding-bottom: 32px;
   position: absolute;
   bottom: 0px;

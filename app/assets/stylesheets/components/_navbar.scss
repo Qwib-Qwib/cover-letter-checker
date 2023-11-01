@@ -19,12 +19,12 @@
 }
 
 .home-link-wrapper {
-  font-size: 35px;
+  font-size: 1.4rem;
 }
 
 .profile-links-wrapper {
   height: 100%;
-  font-size: 25px;
+  font-size: 1rem;
   position: relative;
 
   .username {
@@ -50,7 +50,7 @@
   }
 }
 
-.profile-links-wrapper.signed-in:hover {
+.profile-links-wrapper.signed-in:hover, .profile-links-wrapper.signed-in:focus {
   height: fit-content;
   padding-right: 12px;
   background-color: $not-quite-black;
@@ -70,6 +70,9 @@
   a {
     height: 50px;
     padding-left: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 }
 

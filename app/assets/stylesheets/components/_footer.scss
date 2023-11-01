@@ -15,6 +15,13 @@
   bottom: 0;
 }
 
+footer {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .footer-social-links {
   margin-bottom: 12px;
 }
@@ -46,7 +53,7 @@
   }
 }
 
-.social-links > a:hover {
+.social-links > a:hover, .social-links > a:active {
   .linkedin, .github, .portfolio {
     border-color: $bright-orange;
   }

@@ -1,9 +1,6 @@
 @import 'config/index';
 
 .home-wrapper {
-  // height: calc(100vh - 50px);
-  position: relative;
-  top: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,17 +9,18 @@
 .home {
   font-family: $main-font;
   background-color: $light-brown;
-  margin-top: 12px !important;
+  margin-top: 35px !important;
   padding: 12px;
   border-radius: 12px;
 
   h1 {
     margin-top: 0;
-    font-size: 50px;
+    font-size: 2rem;
+    text-align: center;
   }
 
   p {
-    font-size: 25px;
+    font-size: 1rem;
     text-align: justify;
   }
 

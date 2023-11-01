@@ -17,12 +17,16 @@
 @import 'components/index';
 @import 'config/index';
 
+:root {
+  font-size: 25px;
+}
+
 body {
   font-family: $main-font;
   background-color: $light-yellow;
   margin: 0;
   min-height: 100vh;
-  font-size: 25px;
+  font-size: 1rem;
   position: relative;
 }
 
@@ -39,11 +43,11 @@ body {
 }
 
 h2 {
-  font-size: 35px;
+  font-size: 1.4rem;
 }
 
 h3 {
-  font-size: 27px;
+  font-size: 1.08rem;
 }
 
 a:not(.button, .navbar-link, .offer-link, .application-link) {
@@ -52,4 +56,28 @@ a:not(.button, .navbar-link, .offer-link, .application-link) {
 
 a:not(.button, .navbar-link, .offer-link, .application-link):visited {
   color: $dark-brown;
+}
+
+@media (max-width: 870px) {
+  :root {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 765px) {
+  :root {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 695px) {
+  :root {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 625px) {
+  :root {
+    font-size: 16px;
+  }
 }

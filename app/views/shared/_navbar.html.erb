@@ -3,7 +3,7 @@
     <%= link_to 'Est-il compatible ?', user_signed_in? ? user_root_path : root_path, class: 'navbar-link' %>
   </div>
   <% if user_signed_in? %>
-    <div class='profile-links-wrapper signed-in'>
+    <div class='profile-links-wrapper signed-in' tabindex="0">
       <div class='username'><%= current_user.username %></div>
       <div class='user-links'>
         <%= link_to 'Mes offres', offers_path, class: 'navbar-link' %>

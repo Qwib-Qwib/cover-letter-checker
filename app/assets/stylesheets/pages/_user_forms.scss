@@ -23,7 +23,7 @@
   }
 
   form {
-    font-size: 20px;
+    font-size: 0.8rem;
   }
 
   .input {
@@ -58,6 +58,12 @@
 
   .button {
     margin-top: 12px;
+    cursor: pointer;
+  }
+
+  textarea {
+    height: 20vh;
+    resize: vertical;
   }
 }
 
@@ -69,10 +75,10 @@
 
 .button.delete-account {
   background-color: red;
-  font-size: 15px;
+  font-size: 0.6rem;
 }
 
-.button.delete-account:hover {
+.button.delete-account:hover, .button.delete-account:active {
   background-color: $yellow;
   color: red;
   transition: background-color, color, 0.3s;
