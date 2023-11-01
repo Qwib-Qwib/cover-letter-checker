@@ -9,9 +9,6 @@ gem "rails", "~> 7.0.8"
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
-# Use sqlite3 as the database for Active Record
-# gem "sqlite3", "~> 1.4"
-
 # Use PostgreSQL as the database for Active Record
 gem "pg"
 
@@ -59,10 +56,6 @@ gem 'simple_form'
 
 # Use autoprefixer-rails to automatically add custom CSS prefixes for browser compatitility
 gem 'autoprefixer-rails'
-
-# Use httparty to communicate with APIs. USE THIS OR RUBY-OPENAI.
-# The 'chatgpt_request_service.rb' service file is associated with this gem.
-gem 'httparty'
 
 # Use ruby-openai to make API calls to ChatGPT. USE THIS OR HTTPARTY.
 # The 'openai.rb' initializer file is associated with this gem.
