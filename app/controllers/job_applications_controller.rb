@@ -1,4 +1,6 @@
 class JobApplicationsController < ApplicationController
+  before_action :authenticate_user!, only: %i[show new create]
+
   def show
     @application = JobApplication.find(params[:id])
     render file: "public/401.html", status: :unauthorized if @application.offer.user != current_user

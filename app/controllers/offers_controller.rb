@@ -1,4 +1,6 @@
 class OffersController < ApplicationController
+  before_action :authenticate_user!, only: %i[index show new create]
+
   def index
     @user = current_user
     @my_offers = @user.offers
