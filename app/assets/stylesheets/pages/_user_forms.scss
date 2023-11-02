@@ -9,7 +9,7 @@
 }
 
 .form-inputs {
-  width: 40%;
+  width: 60%;
 }
 
 .user-form {
@@ -93,4 +93,31 @@
 
 span.error {
   display: none;
+}
+
+@media (max-width: 1300px) {
+  .form-inputs {
+    width: 80%;
+  }
+}
+
+@media (max-width: 600px) {
+  .form-inputs {
+    width: 100%;
+  }
+
+  .user-form {
+    .input {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    label {
+      margin-bottom: 2%;
+    }
+
+    input:not(.button, .boolean), textarea {
+      width: 80%;
+    }
+  }
 }

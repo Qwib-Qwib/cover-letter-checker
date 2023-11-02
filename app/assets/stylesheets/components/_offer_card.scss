@@ -9,7 +9,7 @@
 .offer-card {
   background-color: $light-brown;
   padding: 12px;
-  margin: 12px 0;
+  height: 510px;
 
   * {
     margin: 0;
@@ -49,4 +49,12 @@
 
 .offer-card-applications-count {
   margin-top: 8px;
+}
+
+// This media query is set in conjunction with a similar one in the offers index stylesheet. Without it, the cards would
+// become too tall for their content with a single grid column.
+@media (max-width: 1050px) {
+  .offer-card {
+    height: auto;
+  }
 }

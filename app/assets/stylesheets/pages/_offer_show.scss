@@ -37,6 +37,36 @@
 
 .offer-show-applications-list {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 22px;
+  margin-top: 18px;
+}
+
+@media (max-width: 1700px) {
+  .button.back-to-offers-index {
+    position: initial;
+    margin-bottom: 29.05px;
+  }
+
+  .offer-show-data-content {
+    width: 60%;
+  }
+}
+
+@media (max-width: 1600px) {
+  .offer-show-applications-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1250px) {
+  .offer-show-data-content {
+    width: 80%;
+  }
+}
+
+@media (max-width: 1050px) {
+  .offer-show-applications-list {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
 }
