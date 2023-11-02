@@ -41,7 +41,7 @@ class JobApplicationsController < ApplicationController
       parameters: {
         model: "gpt-3.5-turbo",
         messages: [
-          { role: 'user', content: "You will be prompted by recruiters with two extracts in French. The first one is a job offer, the second one is a cover letter for that offer. Help the recruiter judge the applicant by comparing both inputs and explaining the strengths and weaknesses of the applicant relative to the job offer with a few bullet points. End with your nuanced opinion on whether or not they'd be a good fit. Your answer must be in French." },
+          { role: 'user', content: "You will be prompted by a recruiter with two extracts, in either French or English. The first one is a job offer, the second one is a cover letter for that offer. Help the recruiter judge the applicant by comparing both inputs and explaining the strengths and weaknesses of the applicant relative to the job offer with a few bullet points. End with your nuanced opinion on whether or not they'd be a good fit. Do not hesitate to go into details in both the bullets points and your conclusion, and to infer qualities and drawbacks from indirect meaning, but the whole answer should not contain more than 2500 characters. Your answer must be in French." },
           { role: 'user', content: @offer.content},
           { role: 'user', content: @application.content}
         ],
