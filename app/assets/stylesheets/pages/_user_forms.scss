@@ -10,6 +10,28 @@
 
 .form-inputs {
   width: 60%;
+
+  > .input:first-of-type, .limited-chars-input:first-of-type {
+    margin-bottom: 5%;
+  }
+
+  > .input:last-of-type, .limited-chars-input:last-of-type {
+    margin-top: 5%;
+  }
+
+  > .input:not(:first-of-type, :last-of-type), .limited-chars-input:not(:first-of-type, :last-of-type) {
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+
+  .limited-chars-input {
+    display: flex;
+    flex-direction: column;
+  }
+
+  small {
+    align-self: end;
+  }
 }
 
 .user-form {
@@ -31,18 +53,18 @@
     justify-content: space-between;
   }
 
-  .input:first-of-type {
-    margin-bottom: 5%;
-  }
+  // .input:first-of-type {
+  //   margin-bottom: 5%;
+  // }
 
-  .input:last-of-type {
-    margin-top: 5%;
-  }
+  // .input:last-of-type {
+  //   margin-top: 5%;
+  // }
 
-  .input:not(:first-of-type, :last-of-type) {
-    margin-top: 5%;
-    margin-bottom: 5%;
-  }
+  // .input:not(:first-of-type, :last-of-type) {
+  //   margin-top: 5%;
+  //   margin-bottom: 5%;
+  // }
 
   input:not(.button, .boolean), textarea {
     margin-left: 12px;

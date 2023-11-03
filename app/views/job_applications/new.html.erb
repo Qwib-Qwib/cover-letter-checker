@@ -16,9 +16,15 @@
           <% end %>
         </ul>
       <% end %>
+      <div class='limited-chars-input' data-controller='chars-count' data-chars-count-min-value=1 data-chars-count-max-value=100>
+        <%= f.input :applicant_name, input_html: { 'data-action': 'input->chars-count#countChars', 'data-chars-count-target': 'input' } %>
+        <small data-chars-count-target='charLine'>Compte de caractères : <span data-chars-count-target='charCount'></span>/100<span data-chars-count-target='charCountExplanation'></span></small>
+      </div>
 
-      <%= f.input :applicant_name %>
-      <%= f.input :content %>
+      <div class='limited-chars-input' data-controller='chars-count' data-chars-count-min-value=100 data-chars-count-max-value=3500>
+        <%= f.input :content, input_html: { 'data-action': 'input->chars-count#countChars', 'data-chars-count-target': 'input' } %>
+        <small data-chars-count-target='charLine'>Compte de caractères : <span data-chars-count-target='charCount'></span>/3500<span data-chars-count-target='charCountExplanation'></span></small>
+      </div>
     </div>
 
     <%= f.button :submit, 'Enregistrer', class: 'button' %>
