@@ -9,18 +9,7 @@ export default class extends Controller {
   }
 
   charCountTargetConnected() {
-    this.charCountTarget.innerText = this.inputTarget.value.length;
-
-    if (parseInt(this.charCountTarget.innerText) < this.minValue) {
-      this.charLineTarget.style.color = 'red';
-      this.charCountExplanationTarget.innerText = ' Trop court !';
-    } else if (parseInt(this.charCountTarget.innerText) > this.maxValue) {
-      this.charLineTarget.style.color = 'red';
-      this.charCountExplanationTarget.innerText = ' Trop long !';
-    } else {
-      this.charLineTarget.style.color = 'black';
-      this.charCountExplanationTarget.innerText = '';
-    }
+    this.countChars();
   }
 
   countChars() {
